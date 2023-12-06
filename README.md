@@ -11,6 +11,9 @@ This app implements the very basics of functionality as it was proposed by examp
 4. Authorized users can chat with each other (no group chats implemented).
 5. List of chats is searchable.
 
+## Used technologies (Project's stack)
+React, Next.js 14 (with app router), MongoDB Atlas, Tailwind CSS, JWT.
+
 ## Main problems
 * Authentication status is stored in React Context (not the best option possible, because of losses on manual page reload).
 * Messaging wasn't implemented with use of WebSockets and therefore isn't instant.
