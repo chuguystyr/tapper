@@ -239,7 +239,7 @@ export async function fetchChat(page = 0, limit = 10, withUser: string) {
         { fromUser: new ObjectId(withUserId._id), toUser: new ObjectId(userId) }
       ]
     })
-    .sort({ createdAt: 1 })
+    .sort({ createdAt: -1 })
     .skip(skip)
     .limit(limit);
 
@@ -248,6 +248,6 @@ export async function fetchChat(page = 0, limit = 10, withUser: string) {
       text: message.text,
       timestamp: message.createdAt.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
       lastRead: message.read
-    }));
+    })).reverse();
   }
 }
